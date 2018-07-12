@@ -14,11 +14,11 @@ ENV PATH="/opt/drill/apache-drill-1.13.0/bin:${PATH}"
 
 WORKDIR /app
 
-COPY run.sh ./
+COPY entrypoint.sh ./
 
 EXPOSE 8047
 EXPOSE 31010
 
-ENTRYPOINT ["./run.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
 
 
