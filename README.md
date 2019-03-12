@@ -10,7 +10,7 @@ wget http://apache.40b.nl/drill/drill-1.15.0/apache-drill-1.15.0.tar.gz
 ## build 
 e.g. for version 1.15
 ```
-docker build -t drill . --build-arg VERSION="1.15.0"
+docker build -t apache-drill . --build-arg VERSION="1.15.0"
 ```
 
 ## run
