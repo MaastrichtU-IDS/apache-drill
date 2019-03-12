@@ -14,7 +14,7 @@ docker build -t apache-drill:1.15.0 . --build-arg VERSION="1.15.0"
 
 ## run
 ```
-docker run -dit --rm -p 8047:8047 -p 31010:31010 --name drill -v /data:/data:ro apache-drill:1.15.0
+docker run -dit --rm --name drill -v /data:/data:ro -p 8047:8047 -p 31010:31010 apache-drill:1.15.0
 ```
 
 ## test
