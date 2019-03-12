@@ -3,7 +3,7 @@
 ## get apache-drill 
 e.g. for version 1.15 ([Mirrors](https://drill.apache.org/download/))
 ```
-wget http://apache.40b.nl/drill/drill-1.15.0/apache-drill-1.15.0.tar.gz
+wget -N http://apache.40b.nl/drill/drill-1.15.0/apache-drill-1.15.0.tar.gz
 ```
 
 ## build 
