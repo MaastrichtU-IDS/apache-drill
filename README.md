@@ -19,4 +19,4 @@ docker run -dit --rm -p 8047:8047 -p 31010:31010 --name drill -v /data:/data:ro 
 
 ## test
 1. Navigate to http://localhost:8047
-2. Try following query `show files in dfs.root.`/data/``
+2. Try following query `show files in dfs.root.\`/data/\``
