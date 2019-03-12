@@ -16,3 +16,7 @@ docker build -t apache-drill . --build-arg VERSION="1.15.0"
 ```
 docker run -dit --rm -p 8047:8047 -p 31010:31010 --name drill -v /data:/data:ro apache-drill
 ```
+
+## test
+1. Navigate to http://localhost:8047
+2. Try following query `show files in dfs.root.`/data/``
