@@ -1,13 +1,16 @@
 # apache-drill
 
-## get apache-drill
+## get apache-drill 
+e.g. for version 1.15
+[Mirrors](https://drill.apache.org/download/)
 ```
-wget ftp://apache.proserve.nl/apache/drill/drill-1.13.0/apache-drill-1.13.0.tar.gz
+wget http://apache.40b.nl/drill/drill-1.15.0/apache-drill-1.15.0.tar.gz
 ```
 
-## build
+## build 
+e.g. for version 1.15
 ```
-docker build -t apache-drill .
+docker build -t drill . --build-arg VERSION="1.15.0"
 ```
 
 ## run
