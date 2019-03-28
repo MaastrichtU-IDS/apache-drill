@@ -1,4 +1,4 @@
-FROM java:openjdk-8-jdk
+FROM openjdk:8-jdk
 
 RUN apt-get update && apt-get install -y base-files lsb-release lsb-base
 
