@@ -1,6 +1,6 @@
 FROM java:openjdk-8-jdk
 
-RUN RUN sed -i '/jessie-updates/d' /etc/apt/sources.list  # Now Archived
+RUN sed -i '/jessie-updates/d' /etc/apt/sources.list  # Now Archived
 RUN apt-get update && apt-get install -y base-files lsb-release lsb-base
 
 # default 1.15.0, override with --build-arg switch
