@@ -1,6 +1,11 @@
 FROM openjdk:8-jdk
 
-RUN apt-get update && apt-get install -y base-files lsb-release lsb-base
+
+RUN echo "deb [check-valid-until=no] http://archive.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list && \
+  sed -i '/deb http:\/\/deb.debian.org\/debian jessie-updates main/d' /etc/apt/sources.list
+
+RUN  apt-get -o Acquire::Check-Valid-Until=false update && \
+  apt-get install -y base-files lsb-release lsb-base
 
 # default 1.15.0, override with --build-arg switch
 ARG VERSION="1.15.0"
