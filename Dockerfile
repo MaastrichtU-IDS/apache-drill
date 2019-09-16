@@ -8,7 +8,9 @@ RUN apt-get update && apt-get install -y base-files lsb-release lsb-base
 ARG VERSION="1.15.0"
 ENV DRILL_VERSION=${VERSION}
 
-ADD ./apache-drill-${DRILL_VERSION}.tar.gz /opt/drill/
+WORKDIR /opt/drill
+ADD http://apache.40b.nl/drill/drill-${DRILL_VERSION}/apache-drill-${DRILL_VERSION}.tar.gz .
+RUN tar -xvzf apache-drill-${DRILL_VERSION}.tar.gz
 
 COPY entrypoint.sh /app/
 
