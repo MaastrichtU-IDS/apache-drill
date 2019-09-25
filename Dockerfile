@@ -9,7 +9,7 @@ ARG VERSION="1.15.0"
 ENV DRILL_VERSION=${VERSION}
 
 WORKDIR /opt/drill
-ADD http://apache.40b.nl/drill/drill-${DRILL_VERSION}/apache-drill-${DRILL_VERSION}.tar.gz .
+ADD https://mirrors.ocf.berkeley.edu/apache/drill/drill-${DRILL_VERSION}/apache-drill-${DRILL_VERSION}.tar.gz .
 RUN tar -xvzf apache-drill-${DRILL_VERSION}.tar.gz
 
 COPY entrypoint.sh /app/
