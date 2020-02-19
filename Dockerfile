@@ -8,8 +8,13 @@ RUN apt-get update && apt-get install -y base-files lsb-release lsb-base
 ARG VERSION="1.17.0"
 ENV DRILL_VERSION=${VERSION}
 
+# ENV DRILLBIT_MAX_PROC_MEM="100G"
+# ENV DRILL_HEAP="50G"
+# ENV DRILLBIT_MAX_DIRECT_MEMORY="100G"
+
 WORKDIR /opt/drill
-ADD https://mirrors.ocf.berkeley.edu/apache/drill/drill-${DRILL_VERSION}/apache-drill-${DRILL_VERSION}.tar.gz .
+
+ADD http://apache.40b.nl/drill/drill-${DRILL_VERSION}/apache-drill-${DRILL_VERSION}.tar.gz .
 RUN tar -xvzf apache-drill-${DRILL_VERSION}.tar.gz
 
 COPY entrypoint.sh /app/
