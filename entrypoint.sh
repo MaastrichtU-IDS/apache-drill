@@ -1,4 +1,8 @@
 #!/bin/bash
 
-bash /opt/drill/apache-drill-${DRILL_VERSION}/bin/auto-setup.sh
+export DRILLBIT_MAX_PROC_MEM=${DRILLBIT_MAX_PROC_MEM:-"420G"}
+export DRILL_HEAP=${DRILL_HEAP:-"218G"}
+export DRILL_MAX_DIRECT_MEMORY=${DRILL_MAX_DIRECT_MEMORY:-"200G"}
+export DRILLBIT_CODE_CACHE_SIZE=${DRILLBIT_CODE_CACHE_SIZE:-"2G"}
+
 bash /opt/drill/apache-drill-${DRILL_VERSION}/bin/drill-embedded
