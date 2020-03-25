@@ -9,10 +9,10 @@ RUN apt-get update && apt-get install -y base-files lsb-release lsb-base
 ARG VERSION="1.17.0"
 ENV DRILL_VERSION=${VERSION}
 
-# Usually 4-8G
+# Java memory limit per node. Usually 50% of the machine total memory
 ARG DRILL_HEAP="4G"
 ARG DRILLBIT_MAX_MEMORY="8G"
-# Java memory limit per node. Up to 100G
+# Note: those defaults are overwritten by entrypoint.sh
 
 ENV DRILL_HEAP=${DRILL_HEAP}
 ENV DRILLBIT_MAX_PROC_MEM=${DRILLBIT_MAX_MEMORY}
